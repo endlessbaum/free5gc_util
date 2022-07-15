@@ -12,6 +12,7 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
 )
@@ -165,7 +166,8 @@ func renameOldLogFile(fullPath string) error {
 // NewGinWithLogrus - returns an Engine instance with the ginToLogrus and Recovery middleware already attached.
 func NewGinWithLogrus(log *logrus.Entry) *gin.Engine {
 	engine := gin.New()
-	engine.Use(ginToLogrus(log), ginRecover(log))
+	//engine.Use(ginToLogrus(log), ginRecover(log))
+	engine.Use(ginToLogrus(log), cors.Default() ,ginRecover(log))
 	return engine
 }
 

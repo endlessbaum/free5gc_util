@@ -5,6 +5,7 @@ go 1.14
 require (
 	github.com/antonfisher/nested-logrus-formatter v1.3.1
 	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d
+	github.com/gin-contrib/cors v1.3.1
 	github.com/evanphx/json-patch v0.5.2
 	github.com/gin-gonic/gin v1.7.3
 	github.com/mitchellh/mapstructure v1.4.1
